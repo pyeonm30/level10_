@@ -15,9 +15,7 @@ class Fruit extends Product{
 //	Fruit(){
 //	super(); Product();
 //}
-	
 	String origin;
-	
 	public Fruit(String name, int price, String origin) {
 		super(name, price);
 		this.origin = origin;
@@ -31,6 +29,7 @@ public class _04suepr생성자 {
 
 		Product meat = new Product("고기",10000);
 		Fruit banana = new Fruit("바나나", 2000, "필리핀");
+		
 		
 		
 	}
