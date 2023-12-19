@@ -1,5 +1,8 @@
 package _05인터페이스;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 interface I{
 	void methodI();
 }
@@ -12,17 +15,12 @@ class AAA{
 	}
 }
 class BBB implements I{
-
 	@Override
 	public void methodI() {
 		System.out.println("메서드 i를 bbb에서 구현");
 	}
-
-	
-	
 }
 class CCC implements I{
-
 	@Override
 	public void methodI() {
 		System.out.println("메서드 i를 ccc에서 구현");
@@ -30,15 +28,14 @@ class CCC implements I{
 
 }
 
-
 public class _04느슨한관계 {
-
 	public static void main(String[] args) {
 
 	   AAA a = new AAA();
 	   a.methodA(new BBB());
 	   a.methodA(new CCC());
-		
+	 //Collection<E>
+	  // ArrayList<Integer> list = null;
 	}
 
 }
