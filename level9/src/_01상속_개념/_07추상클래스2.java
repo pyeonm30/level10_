@@ -1,4 +1,4 @@
-package 상속_개념;
+package _01상속_개념;
 
 
 public class _07추상클래스2 {
@@ -8,9 +8,9 @@ public class _07추상클래스2 {
 		// upcasting 자식객체가 부모클래스타입 가지는것
 		
 		Parent p = new Parent();
+		//Child p2 = new Parent();
 		
 		Child c1 = new Child();
-		
 		
 		// 이미 자식은 부모를 생성하기때문에
 		// 부모클래스 타입으로 만들 수 있다. 

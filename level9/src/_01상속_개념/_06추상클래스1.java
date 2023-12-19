@@ -1,4 +1,4 @@
-package 상속_개념;
+package _01상속_개념;
 
 //abstract // 추상화 : abstract  <-> 구체화
 
@@ -21,6 +21,14 @@ abstract class A3{
 }
 
 class B3 extends A3{
+	// 오버 로딩 
+	void test() {
+		
+	}
+	void test(int num) {
+		
+	}
+	
 	@Override
 	void test1() {
 		System.out.println("test1 호출!!! ");

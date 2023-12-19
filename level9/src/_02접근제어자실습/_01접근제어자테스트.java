@@ -1,13 +1,12 @@
-package 접근제어자실습;
+package _02접근제어자실습;
 
-import 상속_개념.AccessTest;
+import _01상속_개념.AccessTest;
 
 
 class Child extends AccessTest{
-	
-	
-	
+	int num = 100;
 	Child(){
+		super(); // 부모를 먼저 생성한다 
 		super.a = 10;
 		b = 100; //b는 자식 객체라서 내부에서는 접근 가능 
 		
@@ -25,6 +24,7 @@ public class _01접근제어자테스트{
 		//c.b = 10; child 객체 자체는  Main 다른 패키지안에 있기때문에 접근 불가능 
 		
 		AccessTest e = new AccessTest();
+		
 	
 	}
 }

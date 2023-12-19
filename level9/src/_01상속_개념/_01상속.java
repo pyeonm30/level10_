@@ -1,4 +1,4 @@
-package 상속_개념;
+package _01상속_개념;
 
 // 객체지향 : OOP : object oriented programming 
 // 여러 객체들이 상호 협력해서 task를 수행 완료 시키는 것 

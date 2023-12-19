@@ -1,4 +1,4 @@
-package 접근제어자실습;
+package _02접근제어자실습;
 
 final class Test{
 	int num1; 
@@ -12,9 +12,7 @@ final class Test{
 		return "Test [num1=" + num1 + ", num2=" + num2 + "]";
 	} 
 	
-	
 }
-
 
 public class _02파이널테스트 {
 	public static void main(String[] args) {
