@@ -7,7 +7,8 @@ public class _gameMain {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		Random r = new Random();
-
+		                         // max = 최대 공격력 범위 : 공격범위는 1~max 까진
+                          // pos,hp,max,count
 		Hero hero = new Hero(1, 200, 20, 2);
 		Zombie zom = new Zombie(5, 100, 10);
 		
@@ -17,6 +18,8 @@ public class _gameMain {
 		int pos = 1;
 		//hero.setPos(pos);
 		while (true) {
+	
+			if(hero.isDead()) break;
 			System.out.println("현재 위치 = " + pos);
 
 			System.out.print("앞으로 이동하기(1),종료하기(2) ");
