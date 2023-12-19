@@ -19,5 +19,5 @@ abstract public class Unit{
 		rd = new Random();
 	}
 
-	abstract void attack(Unit unit);
+	abstract boolean attack(Unit unit);
 }
