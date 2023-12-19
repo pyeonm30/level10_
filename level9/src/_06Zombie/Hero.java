@@ -8,8 +8,8 @@ package Zombie;
 // 일반 적은 보호막 가지고 있지 않음 
 
 public class Hero extends Unit {
-	int power;
-	int count;
+	private int power;
+	private int count; // 체력포션 
 	
 	public Hero(int pos, int hp, int max, int count) {
 		super(pos, hp, max);

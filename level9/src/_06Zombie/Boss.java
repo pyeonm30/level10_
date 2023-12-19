@@ -11,8 +11,6 @@ import java.util.*;
 
 public class Boss extends Zombie {
 
-	Random r = new Random();
-
 	private int shield;
 	public Boss(int pos, int hp, int max, int shield) {
 		super(pos, hp, max);
