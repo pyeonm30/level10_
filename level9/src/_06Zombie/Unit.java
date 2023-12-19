@@ -7,16 +7,16 @@ import java.util.*;
 
 abstract public class Unit{
 	private int pos; // 현재위치 
-	protected int hp; // 현재 hp
-	protected int max; // 랜덤 공격 1부터 max 까지의 범위 
-	protected boolean dead; // 죽었는지 살았는지 
+	private int hp; // 현재 hp
+	private int max; // 랜덤 공격 1부터 max 까지의 범위 
+	private boolean dead; // 죽었는지 살았는지 
 	private Random rd; // 각각 하위 유닛들이 이 랜덤 클래스 사용해서 공격 범위 지정 
 	
 	public Unit(int pos, int hp, int max) {
 		this.pos=pos;
 		this.hp=hp;
 		this.max=max;
-		r = new Random();
+		rd = new Random();
 	}
 
 	abstract void attack(Unit unit);
