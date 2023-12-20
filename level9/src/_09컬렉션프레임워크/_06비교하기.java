@@ -3,6 +3,10 @@ package _09컬렉션프레임워크;
 import java.util.Comparator;
 import java.util.TreeSet;
 
+
+// comparable 자신과 다른 객체를 비교 
+// comparator 주어진 두 객체를 비교  : treeSet / treeMap 사용 : 컬렉션 정렬 기준으로 활용
+
 class Person implements Comparable<Person> {
     private static int lastNo = 0;
     private int no;
