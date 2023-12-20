@@ -57,7 +57,8 @@ public class _04Set이론 {
 				);
 		System.out.println(list2);
 		
-	       
+	    // hashSet 는 hash 알고리즘을 써서 저장하는 방식이라서 순서대로 저장되는 것도 있는 것처럼
+		// 보이지만 순서대로 저장하는 것이 아니다!! 
         HashSet<Integer> intHashSet = new HashSet<>();
         LinkedHashSet<Integer> intLinkedHashSet = new LinkedHashSet<>();
         TreeSet<Integer> intTreeSet = new TreeSet<>();
