@@ -42,7 +42,7 @@ class Person implements Cloneable{
 	
 }
 
-public class _02클론 {
+public class _02clone {
 
 	public static void main(String[] args) {
 
