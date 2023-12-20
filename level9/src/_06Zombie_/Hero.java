@@ -17,7 +17,7 @@ public class Hero extends Unit {
 
 	}
 
-	public boolean attackBoss(Unit unit) {
+	private boolean attackBoss(Unit unit) {
 		Boss boss = (Boss) unit;
 		power = getRandRange(getMax());
 		if (boss.getShield() > 0) {
@@ -33,6 +33,11 @@ public class Hero extends Unit {
 
 	@Override
 	public boolean attack(Unit enemy) {
+		
+		if(enemy instanceof Boss) {
+			return attackBoss(enemy);
+		}
+		
 		power = getRandRange(getMax());
 		enemy.setHp(enemy.getHp() - power);
 		// Zombie zombi = (Zombie)enemy;

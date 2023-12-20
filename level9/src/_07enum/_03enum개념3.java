@@ -72,7 +72,7 @@ class PizzaStore {
 
 }
 
-public class _02enum개념3 {
+public class _03enum개념3 {
 
 	public static void main(String[] args) {
 
