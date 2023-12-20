@@ -3,6 +3,7 @@ package _09컬렉션프레임워크;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 
 class User implements Comparable<User>{
 	String name;
@@ -71,6 +72,10 @@ public class _01ArrayList_이론 {
 		
 		System.out.println(list);
 		
+		LinkedList<User> list3 = new LinkedList<User>();
+		list3.addAll(list);
+		
+		System.out.println(list3);
 		
 	}
 }
