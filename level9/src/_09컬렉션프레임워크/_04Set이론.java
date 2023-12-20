@@ -2,6 +2,41 @@ package _09컬렉션프레임워크;
 
 import java.util.*;
 
+class User2{
+	String name;
+	int age;
+
+	public User2(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return name +" " + age;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(age, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User2 other = (User2) obj;
+		return age == other.age && Objects.equals(name, other.name);
+	}
+	
+
+}
+
+
 public class _04Set이론 {
 
 	public static void main(String[] args) {
@@ -14,6 +49,8 @@ public class _04Set이론 {
 		
 		System.out.println(list1);
 		System.out.println(list1.size());
+		
+		System.out.println(list1.contains(2));
 		
 		Set<String> list2 = new HashSet<>(
 				Arrays.asList("test1","test1","test2","test3")
@@ -30,7 +67,8 @@ public class _04Set이론 {
             intLinkedHashSet.add(i);
             intTreeSet.add(i);
         }
-        for (var s : new Set[] {intHashSet, intLinkedHashSet, intTreeSet}) {
+        
+        for (Set s : new Set[] {intHashSet, intLinkedHashSet, intTreeSet}) {
             System.out.println(s);
         }
         
@@ -50,6 +88,15 @@ public class _04Set이론 {
             System.out.println(s);
         }
         
+		Set<User2> userList = new HashSet<User2>();
+		
+		userList.add(new User2("test1" , 10));
+		userList.add(new User2("test2" , 10));
+		userList.add(new User2("test1" , 30));
+		userList.add(new User2("test1" , 10));
+		
+		System.out.println(userList);
+		
 		
 		
 		
