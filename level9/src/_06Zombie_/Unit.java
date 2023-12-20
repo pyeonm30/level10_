@@ -1,4 +1,4 @@
-package Zombie;
+package _06Zombie_;
 import java.util.*;
 
 // 유닛은 전부 이동가능하며 pos는 현재 위치를 나타낸다 
@@ -20,4 +20,39 @@ abstract public class Unit{
 	}
 
 	abstract boolean attack(Unit unit);
+
+	public int getPos() {
+		return pos;
+	}
+
+	public void setPos(int pos) {
+		this.pos = pos;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public void setHp(int hp) {
+		this.hp = hp;
+		if(this.hp < 0) {
+			this.hp =0;
+			dead = true;
+			System.out.println("==== 사망 ===== ");
+		}
+	}
+
+	public int getMax() {
+		return max;
+	}
+
+	public boolean isDead() {
+		return dead;
+	}
+
+	public int getRandRange(int num) {
+		return rd.nextInt(num)+1;
+	}
+	
+	
 }

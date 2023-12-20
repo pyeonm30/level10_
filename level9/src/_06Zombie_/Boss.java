@@ -1,4 +1,4 @@
-package Zombie;
+package _06Zombie_;
 
 import java.util.*;
 
@@ -16,4 +16,37 @@ public class Boss extends Zombie {
 		super(pos, hp, max);
 		this.shield = shield;
 	}
+	
+	public int getShield() {
+		return shield;
+	}
+
+	public void setShield(int shield) {
+		this.shield = shield;
+		if(shield < 0) {
+			shield = 0;
+		}
+	}
+
+	@Override
+	public boolean attack(Unit hero) {
+		
+		int power = getRandRange(getMax());
+		int range = getRandRange(4); // 1 2 3 4 
+		
+		if(range == 1) { // 25% 
+			System.out.println("===== 보스 필살 공격 =====");
+			power*=2; 
+		}else {
+			System.out.println(" [ 보스 일반 공격 ] ");
+		}
+		
+		hero.setHp(hero.getHp()-power);
+		
+		System.out.println(" 보스가 %d 공격력으로 히어로 공격 현재 히어로 hp %d ".formatted(power, hero.getHp()));
+		
+		return hero.isDead();
+	}
+
+	
 }
