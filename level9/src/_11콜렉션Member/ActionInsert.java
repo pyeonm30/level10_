@@ -18,7 +18,7 @@ public class ActionInsert implements Action{
 		System.out.println("비밀번호 입력 >> ");
 		String pw = Util.sc.next();
 		
-		dao.insertMember(new Member(id, pw));
+		dao.insertMember(id , pw);
 		
 	}
 

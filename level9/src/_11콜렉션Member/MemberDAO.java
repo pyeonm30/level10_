@@ -17,7 +17,8 @@ public class MemberDAO {
 		memberList = new ArrayList<Member>();
 	}
 	
-	public void insertMember(Member member) {
+	public void insertMember(String id, String pw) {
+		Member member = new Member(id,pw);
 		memberList.add(member);
 		System.out.println(member +" 추가 완료");
 	}
