@@ -11,14 +11,15 @@ public class ActionInsert implements Action{
 		
 		System.out.println("아이디 입력 >> ");
 		String id = Util.sc.next();
-		if(!dao.isValidId(id)) {
-			System.out.println("이미 사용하는 아이디");
-			return;
-		}
+
 		System.out.println("비밀번호 입력 >> ");
 		String pw = Util.sc.next();
 		
-		dao.insertMember(id , pw);
+		if(dao.insertMember(id , pw)) {
+			System.out.println("[ 회원 추가 완료 ]");
+		}else {
+			System.out.println("[ 회원 추가 실패]");
+		}
 		
 	}
 

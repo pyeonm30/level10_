@@ -17,14 +17,21 @@ public class MemberDAO {
 		memberList = new ArrayList<Member>();
 	}
 	
-	public void insertMember(String id, String pw) {
+	public boolean insertMember(String id, String pw) {
+		
+		if(!isValidId(id)) {
+			System.out.println("이미 사용하는 아이디");
+			return false;
+		}
 		Member member = new Member(id,pw);
 		memberList.add(member);
 		System.out.println(member +" 추가 완료");
+		return true;
 	}
 	
 	
 	public boolean isValidId(String id) {
+		
 		if(memberList.size() == 0) return true;
 		for(Member member : memberList) {
 			if(member.getId().equals(id)) {
