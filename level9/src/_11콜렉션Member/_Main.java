@@ -8,8 +8,8 @@ public class _Main {
 		while(true) {
 			System.out.println("========== 메뉴 =========");
 			System.out.println("1) 추가");
-			System.out.println("2) 삭제");
-			System.out.println("3) 수정");
+			System.out.println("2) 삭제(아이디 비번 입력해서)");
+			System.out.println("3) 수정(아이디 비번 입력해서 비번 수정 )");
 			System.out.println("4) 출력(id 이름순으로 출력)");
 			System.out.println("0) 종료");
 			int sel = Util.sc.nextInt();
