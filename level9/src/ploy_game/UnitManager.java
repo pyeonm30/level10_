@@ -9,7 +9,7 @@ public class UnitManager {
 
 	ArrayList<Player> player_list = new ArrayList<>();
 	ArrayList<Unit> mon_list = new ArrayList<>();
-	String path = "game."; // 패키지명 + .
+	String path = UnitManager.class.getPackageName()+".";
 	String mons[] = { "UnitWolf", "UnitBat", "UnitOrc" };
 	Random ran = new Random();
 
