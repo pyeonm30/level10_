@@ -1,8 +1,8 @@
 package ploy_game;
 
-public abstract class Stage {
+public interface Stage {
 
-	public abstract boolean update();
+	 boolean update();
 
-	public abstract void init();
+	 void init();
 }

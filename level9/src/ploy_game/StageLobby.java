@@ -1,6 +1,6 @@
 package ploy_game;
 
-public class StageLobby extends Stage {
+public class StageLobby implements Stage {
 	@Override
 	public boolean update() {
 		System.out.println("=====[LOBBY]=====");

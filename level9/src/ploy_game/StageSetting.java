@@ -1,6 +1,6 @@
 package ploy_game;
 
-public class StageSetting extends Stage {
+public class StageSetting implements Stage {
 
 	@Override
 	public boolean update() {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Vector;
 
-public class StageBattle extends Stage {
+public class StageBattle implements Stage {
 	UnitManager unitManager = new UnitManager();
 	ArrayList<Player> playerList = null;
 	ArrayList<Unit> monList = null;
