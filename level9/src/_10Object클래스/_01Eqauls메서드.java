@@ -32,10 +32,12 @@ class User{
 public class _01Eqauls메서드 {
 	public static void main(String[] args) {
 
-		String name ="test";
-		String name2 = "test";
-		System.out.println(name == name2);
+		String name ="java";
+		String name2 = "java";
+		String name3 = new String("java");
 		
+		System.out.println(name == name2);
+		System.out.println(name == name3);
 		User u1 = new User("test");
 		System.out.println(u1.hashCode());
 		User u2 = new User("test");

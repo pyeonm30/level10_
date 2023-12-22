@@ -48,6 +48,8 @@ public class _Main {
         });
         
         
+        Unit u = new MagicKnight();
+        u.hp = -10;
         
         
 	}
