@@ -6,7 +6,7 @@ public class _MainGame {
 		GameManager gameManager = new GameManager();
 		boolean run = true;
 		while (true) {
-			run = gameManager.changeStage();
+			run = gameManager.changeStage(); // "" false
 			if (run == false) {
 				break;
 			}
