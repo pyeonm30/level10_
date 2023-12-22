@@ -2,9 +2,35 @@ package _08제네릭클레스;
 
 import java.lang.reflect.InvocationTargetException;
 
+
+enum Monster{
+	BAT("박쥐",30),WOLF("울프",50);
+	private String name;
+	private int power;
+	
+	private Monster(String name, int power) {
+		this.name = name;
+		this.power = power;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPower() {
+		return power;
+	}
+	public void setPower(int power) {
+		this.power = power;
+	}
+	
+}
+
 class MyUnit{
 	String name;
 	int power;
+	
 	
 	public MyUnit(){
 		System.out.println(" 유닛의 탄생 ");
@@ -23,9 +49,9 @@ class Wolf extends MyUnit{
 		System.out.println("울프 탄생");
 	}
 	
-	public Wolf(String name, int power) {
-		this.name = name;
-		this.power = power;
+	public Wolf(Monster mon) {
+		this.name = mon.getName();
+		this.power = mon.getPower();
 		System.out.println("울프 탄생");
 	}
 
@@ -58,7 +84,7 @@ public class _04제네릭클래스이론3 {
 			//Object obj = clazz.getDeclaredConstructor().newInstance(); // new Bat();
 			
 			// 오버로딩된 생성자로 객체 생성 
-			Object obj = clazz.getDeclaredConstructor(String.class, int.class).newInstance("대빵울프",300);
+			Object obj = clazz.getDeclaredConstructor(Monster.class).newInstance(Monster.BAT);
 			if(obj instanceof MyUnit) {
 				MyUnit unit = (MyUnit) obj;
 				System.out.println(unit.name +" " + unit.power);
