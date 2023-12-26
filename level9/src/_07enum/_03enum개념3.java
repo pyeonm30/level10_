@@ -84,6 +84,7 @@ public class _03enum개념3 {
 		list.add(PizzaMenu.HP);
 		list.add(PizzaMenu.CP);
 		
+		System.out.println(list.get(0).toString()); // "PP"
 		String[] names = new String[list.size()];
 		int[] orders = new int[list.size()];
 		
@@ -107,6 +108,9 @@ public class _03enum개념3 {
 		for(String menu : "페페로니피자,마라피자,땡초피자,바베큐피자".split(",")) {
 			store.takeOrder(menu);
 		}
+		
+		
+		
 		
 		
 		

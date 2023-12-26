@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Vector;
 
+import ploy_game.Player.Status;
+
 public class StageBattle implements Stage {
 	UnitManager unitManager = new UnitManager();
-	ArrayList<Player> playerList = null;
+	ArrayList<Player> playerList = null;0
 	ArrayList<Unit> monList = null;
 	Random ran = new Random();
 	int monDead = 0;
@@ -38,6 +40,10 @@ public class StageBattle implements Stage {
 
 	void player_attack(int index) {
 		Player p = playerList.get(index);
+		
+		if(p.getStatus().getName().equals("기절") ) {
+			return;
+		}
 		if (p.curhp <= 0)
 			return;
 		System.out.println("======[메뉴 선택]=====");
@@ -62,6 +68,8 @@ public class StageBattle implements Stage {
 			return;
 		while (true) {
 			int idx = ran.nextInt(playerList.size());
+			playerList.get(idx).setStatus(Status.PASSOUT);
+		
 			if (playerList.get(idx).curhp > 0) {
 				m.attack(playerList.get(idx));
 				break;

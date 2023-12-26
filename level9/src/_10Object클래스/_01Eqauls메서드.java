@@ -27,6 +27,21 @@ class User{
 		User other = (User) obj;
 		return Objects.equals(name, other.name);
 	}
+	void printAll(int num) {
+		System.out.println(num);
+	}
+}
+
+class Test01 extends User{
+
+	public Test01(String name) {
+		super(name);
+	}
+	//@Override
+	void printAll(int num) {
+		
+	}
+	
 }
 
 public class _01Eqauls메서드 {
