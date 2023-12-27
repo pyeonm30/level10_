@@ -39,6 +39,23 @@ public class FileDAO {
 	static public FileDAO getInstance() {
 		return instance;
 	}
+
+		private void saveFile(FileName name , String data) {
+
+		Path path = Paths.get(txtPath , name.getName());
+		
+		try(FileOutputStream fos = new FileOutputStream(path.toString());
+			OutputStreamWriter ow = new OutputStreamWriter(fos , charSet);
+			BufferedWriter bw = new BufferedWriter(ow);
+				){
+			bw.write(data);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 	private String loadFile(FileName name) {
 		
