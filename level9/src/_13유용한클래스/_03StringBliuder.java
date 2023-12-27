@@ -1,5 +1,7 @@
 package _13유용한클래스;
 
+import java.util.StringJoiner;
+
 public class _03StringBliuder {
 
 	public static void main(String[] args) {
@@ -36,6 +38,17 @@ public class _03StringBliuder {
 		CharSequence cs1 ="ABC";
 		CharSequence cs2 = new StringBuffer();
 		CharSequence cs3 = new StringBuilder();
+		
+		String[] str = {"사자","호랑이","토끼","뱀"};
+		StringJoiner str1 = new StringJoiner(",","<",">");
+		StringJoiner str2 = new StringJoiner("/","[","]");
+		for(String s : str) {
+			str1.add(s);
+			str2.add(s);
+		}
+		
+		System.out.println(str1.toString());
+		System.out.println(str2.toString());
 	}
 
 }
