@@ -31,7 +31,7 @@ public class CoffeeMachine {
 
 		notifyAll();
 		try {
-			wait();
+			wait(); // 현재 쓰레드가 일을 멈춘다 
 		} catch (InterruptedException e) {
 		}
 	}

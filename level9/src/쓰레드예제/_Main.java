@@ -7,6 +7,7 @@ public class _Main {
 	public static void main(String[] args) {
 		CoffeeMachine coffeeMachine = new CoffeeMachine();
 		ArrayList<Thread> threads = new ArrayList<>();
+		
 		Arrays.stream("지수,제니,로제,리사".split(",")).forEach(s -> {
 			threads.add(new Thread(new CustomerRun(s, coffeeMachine)));
 		});
