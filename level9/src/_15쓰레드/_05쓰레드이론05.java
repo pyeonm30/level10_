@@ -36,9 +36,18 @@ class ATM {
 	public int getBalance() {
 		return balance;
 	}
-	public void withdraw(String name, int amount) {
+	
+	// 이 메서드는 동시에 여러쓰레드가 사용 불가능
+	// 한번에 한쓰레드만 사용할 수 있다 
+	public synchronized void withdraw(String name, int amount) {
+		
+		// this => 현재 쓰레드 의미 
+		//synchronized(this) {
+		
 		if (balance < amount)
 			return;
+		
+	 
 
 		System.out.printf("💰%s 인출 요청 (현 잔액 %d)%n", name, balance);
 		try {
@@ -48,8 +57,8 @@ class ATM {
 		}
 		balance -= amount;
 		System.out.printf("✅ %s 인출 완료 (현 잔액 %d)%n", name, balance);
-	
-	}
+		}
+	//}
 	
 }
 
